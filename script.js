@@ -13,18 +13,6 @@ const medicines = [
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function addToCart(medicineName) {
-  // Check if user is logged in
-  const loggedInUser = localStorage.getItem("loggedInUser");
-  if (!loggedInUser) {
-    const loginContainer = document.querySelector(".hero-login-container");
-    if (loginContainer) {
-      loginContainer.style.display = "block";
-      document.getElementById("loginBox").style.display = "block";
-      document.getElementById("registerBox").style.display = "none";
-    }
-    alert("⚠️ Please login first to add items to your cart.");
-    return;
-  }
 
   // If logged in, proceed with adding to cart
   const med = medicines.find(m => m.name === medicineName);
@@ -195,10 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
   displayCart();
 });
     
-    // 1. **THE FIX**: Initialize the medicine list
-    displayMedicines(medicines);
-
-    // 2. Set up Login/Register Toggle listeners
     if (loginLink && loginBox && registerBox) {
         loginLink.addEventListener('click', e => {
             e.preventDefault();
