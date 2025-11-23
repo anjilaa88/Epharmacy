@@ -1,0 +1,23 @@
+#myprofile h1{
+    color: #00c2a8;
+    text-align: center;
+}
+.profile{
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+.inputsection{
+    text-align: center;
+    align-content: center;
+}
+.inputarea{
+    display: flex;
+    align-items: center;
+    align-content:center ;
+    justify-content: center;
+}
+.inputarea input{
+    height: 22px;
+    margin-left: 10px;
+}
